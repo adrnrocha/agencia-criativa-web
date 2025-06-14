@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <a class="logo" href="#home">Agência&nbsp;<span>Criativa</span> Web</a>
-        <button id="btn-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+    <header class="cabecalho header">
+        <a class="logo header__logo" href="#home">Agência&nbsp;<span class="logo__destaque">Criativa</span> Web</a>
+        <button id="btn-menu" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
             <span></span><span></span><span></span>
         </button>
 
-        <nav id="menu" class="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <nav id="menu" class="menu header__menu">
+            <ul class="menu__lista">
+                <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="#sobre">Sobre Nós</a></li>
+                <li class="menu__item"><a class="menu__link" href="#servicos">Serviços</a></li>
+                <li class="menu__item"><a class="menu__link" href="#depoimentos">Depoimentos</a></li>
+                <li class="menu__item"><a class="menu__link" href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -33,88 +33,88 @@
                                 img/banner-1280.webp 960w,
                                 img/banner-768.webp   640w"
                         sizes="100vw">
-                <img src="img/banner-1280.webp" alt="Equipe criativa trabalhando" loading="lazy">
+                <img src="img/banner-1280.webp" alt="Equipe criativa trabalhando" loading="lazy" class="banner__imagem">
             </picture>
-            <div class="banner-conteudo">
-                <h1>Soluções Digitais que <br><strong>Transformam Marcas</strong></h1>
-                <p>Design, desenvolvimento e estratégia — em um só lugar.</p>
-                <a class="btn-primario" href="#contato">Comece seu projeto</a>
+            <div class="banner__conteudo">
+                <h1 class="banner__titulo">Soluções Digitais que <br><strong>Transformam Marcas</strong></h1>
+                <p class="banner__descricao">Design, desenvolvimento e estratégia — em um só lugar.</p>
+                <a class="btn btn--primario" href="#contato">Comece seu projeto</a>
             </div>
         </section>
 
         <section id="sobre" class="sobre">
-            <h2>Quem Somos</h2>
-            <p>A <strong>Agência Criativa Web</strong> une design e tecnologia para entregar experiências digitais memoráveis. Nosso propósito é impulsionar marcas por meio de soluções inovadoras, sustentáveis e centradas no usuário.</p>
+            <h2 class="secao__titulo">Quem Somos</h2>
+            <p class="sobre__texto">A <strong>Agência Criativa Web</strong> une design e tecnologia para entregar experiências digitais memoráveis. Nosso propósito é impulsionar marcas por meio de soluções inovadoras, sustentáveis e centradas no usuário.</p>
         </section>
 
         <section id="servicos" class="servicos">
-            <h2>O que fazemos</h2>
-            <div class="servicos-grid">
-                <article>
-                    <h3>Design Gráfico</h3>
-                    <p>Identidade visual, materiais impressos e digitais que refletem a essência da sua marca.</p>
+            <h2 class="secao__titulo">O que fazemos</h2>
+            <div class="servicos__grid">
+                <article class="servicos__item">
+                    <h3 class="servicos__titulo">Design Gráfico</h3>
+                    <p class="servicos__descricao">Identidade visual, materiais impressos e digitais que refletem a essência da sua marca.</p>
                 </article>
-                <article>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Sites institucionais, e‑commerce e aplicações SPA responsivas e performáticas.</p>
+                <article class="servicos__item">
+                    <h3 class="servicos__titulo">Desenvolvimento Web</h3>
+                    <p class="servicos__descricao">Sites institucionais, e‑commerce e aplicações SPA responsivas e performáticas.</p>
                 </article>
-                <article>
-                    <h3>UX / UI</h3>
-                    <p>Pesquisa, prototipagem e testes de usabilidade para criar experiências intuitivas.</p>
+                <article class="servicos__item">
+                    <h3 class="servicos__titulo">UX / UI</h3>
+                    <p class="servicos__descricao">Pesquisa, prototipagem e testes de usabilidade para criar experiências intuitivas.</p>
                 </article>
-                <article>
-                    <h3>Branding</h3>
-                    <p>Posicionamento, propósito e narrativa de marca alinhados ao público‑alvo.</p>
+                <article class="servicos__item">
+                    <h3 class="servicos__titulo">Branding</h3>
+                    <p class="servicos__descricao">Posicionamento, propósito e narrativa de marca alinhados ao público‑alvo.</p>
                 </article>
-                <article>
-                    <h3>Marketing Digital</h3>
-                    <p>SEO, campanhas pagas e conteúdo estratégico para gerar tráfego qualificado.</p>
+                <article class="servicos__item">
+                    <h3 class="servicos__titulo">Marketing Digital</h3>
+                    <p class="servicos__descricao">SEO, campanhas pagas e conteúdo estratégico para gerar tráfego qualificado.</p>
                 </article>
-                <article>
-                    <h3>Motion Design</h3>
-                    <p>Animações e vídeos que contam histórias de forma dinâmica e envolvente.</p>
+                <article class="servicos__item">
+                    <h3 class="servicos__titulo">Motion Design</h3>
+                    <p class="servicos__descricao">Animações e vídeos que contam histórias de forma dinâmica e envolvente.</p>
                 </article>
             </div>
         </section>
 
         <section id="depoimentos" class="depoimentos">
-            <h2>O que dizem nossos clientes</h2>
-            <blockquote>
+            <h2 class="secao__titulo">O que dizem nossos clientes</h2>
+            <blockquote class="depoimentos__item">
                 “A Agência Criativa Web elevou nossa presença digital a outro nível — profissionalismo e criatividade em cada detalhe.”
-                <cite>— Maria Silva, CEO @ StartupX</cite>
+                <cite class="depoimentos__autor">— Maria Silva, CEO @ StartupX</cite>
             </blockquote>
-            <blockquote>
+            <blockquote class="depoimentos__item">
                 “Entrega pontual, comunicação clara e um design que superou expectativas!”
-                <cite>— João Almeida, Diretor de Marketing @ AgroTech</cite>
+                <cite class="depoimentos__autor">— João Almeida, Diretor de Marketing @ AgroTech</cite>
             </blockquote>
         </section>
 
         <section id="contato" class="contato">
-            <h2>Fale conosco</h2>
+            <h2 class="secao__titulo">Fale conosco</h2>
 
-            <address>
+            <address class="contato__info">
                 Rua Exemplo, 123 — São Paulo‑SP<br>
                 (11) 99999‑1234<br>
                 contato@agenciacriativaweb.com
             </address>
 
-            <form action="#" method="post">
-                <label>
+            <form action="#" method="post" class="formulario">
+                <label class="formulario__campo">
                     Nome
-                    <input type="text" name="nome" required>
+                    <input type="text" name="nome" required class="formulario__input">
                 </label>
 
-                <label>
+                <label class="formulario__campo">
                     E‑mail
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" required class="formulario__input">
                 </label>
 
-                <label>
+                <label class="formulario__campo">
                     Mensagem
-                    <textarea name="mensagem" rows="5" required></textarea>
+                    <textarea name="mensagem" rows="5" required class="formulario__textarea"></textarea>
                 </label>
 
-                <button type="submit" class="btn-primario">Enviar</button>
+                <button type="submit" class="btn btn--primario">Enviar</button>
             </form>
         </section>
     </main>
@@ -128,7 +128,7 @@
         const nav = document.getElementById('menu');
 
         btn.addEventListener('click', () => {
-            const aberto = nav.classList.toggle('aberto');
+            const aberto = nav.classList.toggle('menu--aberto');
             btn.setAttribute('aria-expanded', aberto);
         });
     </script>
