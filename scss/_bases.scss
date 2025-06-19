@@ -1,0 +1,47 @@
+@use 'variaveis';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: variaveis.$fonte-base;
+    font-size: 1rem;
+    color: variaveis.$cinza-900;
+    line-height: 1.6;
+    background: variaveis.$cinza-100;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw + .5rem, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw + .25rem, 2.5rem);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: .75rem;
+}
+
+section {
+    padding: 4rem 1rem;
+
+    &:nth-of-type(even) {
+        background: #fff;
+    }
+}
+
+.secao__titulo {
+    text-align: center;
+}

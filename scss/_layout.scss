@@ -1,0 +1,108 @@
+@use 'variaveis';
+@use 'mixins';
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: variaveis.$cor-primaria;
+        text-decoration: none;
+    }
+}
+
+.logo__destaque {
+    color: variaveis.$cinza-900;
+}
+
+.menu {
+    position: relative;
+
+    &__lista {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__link {
+        color: variaveis.$cinza-900;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            color: variaveis.$cor-primaria;
+        }
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: .3rem;
+    background: none;
+    border: none;
+
+    span {
+        width: 1.5rem;
+        height: .15rem;
+        background: variaveis.$cinza-900;
+        transition: transform .3s;
+    }
+}
+
+.banner {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__imagem {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(.35);
+    }
+
+    &__conteudo {
+        position: relative;
+        color: #fff;
+        max-width: 45rem;
+        padding: 0 1rem;
+    }
+
+    &__descricao {
+        margin: 1rem 0 2rem;
+        font-size: 1.125rem;
+    }
+}
+
+.rodape {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: .875rem;
+    background: #fff;
+    color: #777;
+}
+
+@include mixins.responsivo(desktop) {
+    .cabecalho,
+    main > section:not(.banner),
+    .rodape {
+        max-width: variaveis.$max-largura;
+        margin: 0 auto;
+    }
+}
