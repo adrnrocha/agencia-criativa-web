@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 @mixin botao($cor, $cor-hover) {
     display: inline-block;
     padding: .75rem 2rem;
@@ -17,11 +19,11 @@
 
 @mixin responsivo($breakpoint) {
     @if $breakpoint == tablet {
-        @media (max-width: 768px) {
+        @media (max-width: calc(variaveis.$max-width * 2)) {
             @content;
         }
     } @else if $breakpoint == desktop {
-        @media (min-width: 1024px) {
+        @media (min-width: calc(variaveis.$min-width * 2)) {
             @content;
         }
     }
